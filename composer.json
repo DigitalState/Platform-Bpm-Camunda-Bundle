@@ -13,13 +13,11 @@
     ],
     "require": {
         "php": ">=5.6",
-        "camunda/camunda-bpm-php-sdk": "dev-master",
-        "digitalstate/platform-bpm-bundle": "dev-master",
-        "digitalstate/platform-security-bundle": "dev-master",
-        "digitalstate/platform-user-bundle": "dev-master"
+        "oro/platform": "1.10.*",
+        "digitalstate/platform-bpm-bundle": "dev-master"
     },
     "autoload": {
-        "psr-0": { "Ds\\Bundle\\BpmCamundaBundle": "" }
+        "psr-0": { "Ds\\Bundle\\BpmPmBundle": "" }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
