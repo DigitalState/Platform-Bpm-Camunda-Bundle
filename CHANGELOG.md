@@ -4,6 +4,8 @@ This changelog references the relevant changes (new features, changes and bugs) 
 
   * Added missing camunda sdk dependency.
 
+# CHANGELOG for 0.1.3
+
 This changelog references the relevant changes (new features, changes and bugs) done in 0.1.3 version.
 
   * Updated camunda sdk dependency.
