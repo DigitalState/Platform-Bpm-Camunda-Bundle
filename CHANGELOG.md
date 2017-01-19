@@ -16,3 +16,10 @@ This changelog references the relevant changes (new features, changes and bugs) 
   
     * Updated camunda sdk dependency.
   
+# CHANGELOG for 0.1.5
+  
+  This changelog references the relevant changes (new features, changes and bugs) done in 0.1.5 version.
+  
+    * Updated camunda sdk dependency.
+    
+    
