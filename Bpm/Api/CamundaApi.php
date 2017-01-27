@@ -13,19 +13,11 @@ class CamundaApi extends AbstractApi
     /**
      * {@inheritdoc}
      */
-    public function __construct($host = 'http://localhost:8080/engine-rest')
-    {
-        parent::__construct($host);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getStartFormKey($processDefinitionId)
+    public function getStartFormKey($definitionId)
     {
         $processDefinitionRequest = new sdk\entity\request\ProcessDefinitionRequest;
         $processDefinitionRequest
-            ->setKey($processDefinitionId)
+            ->setKey($definitionId)
             ->setLatest(true);
         $processDefinition = $this->getApi()->processDefinition->getDefinitions($processDefinitionRequest)->definition_0;
 
@@ -37,7 +29,7 @@ class CamundaApi extends AbstractApi
     /**
      * {@inheritdoc}
      */
-    public function startInstance($processDefinitionId, array $variables = [])
+    protected function _startInstance($processDefinitionId, array $variables = [])
     {
         $processDefinitionRequest = new sdk\entity\request\ProcessDefinitionRequest;
         $processDefinitionRequest
@@ -70,6 +62,7 @@ class CamundaApi extends AbstractApi
                 'valueInfo' => (object) []
             ]
         ];
+
         $processDefinitionRequest = new sdk\entity\request\ProcessDefinitionRequest;
         $processDefinitionRequest->setVariables($variables);
         $processInstance = $this->getApi()->processDefinition->startInstance($processDefinition->getId(), $processDefinitionRequest);
