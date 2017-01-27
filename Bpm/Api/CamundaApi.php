@@ -46,39 +46,27 @@ class CamundaApi extends AbstractApi
         $processDefinition = $this->getApi()->processDefinition->getDefinitions($processDefinitionRequest)->definition_0;
 
         $variables = (object) [
-            $this->variables['none_start_event_form_data'] => (object) [
-                'value' => json_encode($variables['none_start_event_form_data']),
+            $this->variables['user'] => (object) [
+                'value' => json_encode([
+                    $this->variables['user_id'] => $variables['user']['id'],
+                    $this->variables['user_business_unit_id'] => $variables['user']['business_unit_id'],
+                    $this->variables['user_organization_id'] => $variables['user']['organization_id']
+                ]),
                 'type' => 'json',
                 'valueInfo' => (object) []
             ],
-            $this->variables['user_id'] => (object) [
-                'value' => $variables['user_id'],
-                'type' => 'string',
+            $this->variables['service'] => (object) [
+                'value' => json_encode([
+                    $this->variables['service_id'] => $variables['service']['id'],
+                    $this->variables['service_business_unit_id'] => $variables['service']['business_unit_id'],
+                    $this->variables['service_organization_id'] => $variables['service']['organization_id']
+                ]),
+                'type' => 'json',
                 'valueInfo' => (object) []
             ],
-            $this->variables['user_business_unit_id'] => (object) [
-                'value' => $variables['user_business_unit_id'],
-                'type' => 'string',
-                'valueInfo' => (object) []
-            ],
-            $this->variables['user_organization_id'] => (object) [
-                'value' => $variables['user_organization_id'],
-                'type' => 'string',
-                'valueInfo' => (object) []
-            ],
-            $this->variables['service_id'] => (object) [
-                'value' => $variables['service_id'],
-                'type' => 'string',
-                'valueInfo' => (object) []
-            ],
-            $this->variables['service_business_unit_id'] => (object) [
-                'value' => $variables['service_business_unit_id'],
-                'type' => 'string',
-                'valueInfo' => (object) []
-            ],
-            $this->variables['service_organization_id'] => (object) [
-                'value' => $variables['service_organization_id'],
-                'type' => 'string',
+            $this->variables['none_start_event_form_data'] => (object) [
+                'value' => json_encode($variables['none_start_event_form_data']),
+                'type' => 'json',
                 'valueInfo' => (object) []
             ]
         ];
