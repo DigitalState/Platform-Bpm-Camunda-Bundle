@@ -56,6 +56,15 @@ class CamundaApi extends AbstractApi
                 'type' => 'json',
                 'valueInfo' => (object) []
             ],
+            $this->variables['localization'] => (object) [
+                'value' => json_encode([
+                    $this->variables['localization_id'] => $variables['localization']['id'],
+                    $this->variables['localization_language_code'] => $variables['localization']['language_code'],
+                    $this->variables['localization_formatting_code'] => $variables['localization']['formatting_code']
+                ]),
+                'type' => 'json',
+                'valueInfo' => (object) []
+            ],
             $this->variables['none_start_event_form_data'] => (object) [
                 'value' => json_encode($variables['none_start_event_form_data']),
                 'type' => 'json',
