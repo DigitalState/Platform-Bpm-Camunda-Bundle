@@ -2,7 +2,7 @@
 
 This changelog references the relevant changes (new features, changes and bugs) done in 0.2.1 version.
 
-  * Updated camunda sdk package to dev-master.
+  * Updated camunda sdk package to use fork dev-master.
 
 
 # CHANGELOG for 0.2.0
