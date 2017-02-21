@@ -1,4 +1,4 @@
-oro_system_configuration:
+system_configuration:
     groups:
         ds_bpm_camunda_camunda:
             title: ds.bpm_camunda.system_configuration.groups.bpm_camunda_camunda.title
